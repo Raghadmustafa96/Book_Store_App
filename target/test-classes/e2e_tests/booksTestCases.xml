@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="E2E Test Suite">
+
+    <!--Book Store Tests Start-->
+    <test preserve-order="true" name="BookS_tore" enabled="true">
+        <classes>
+            <class name="e2e_tests.testcases_logic.HomepageTestCases">
+                <methods>
+                    <include name="VerifyHomePageTitleAppearsCorrect"/>
+                    <include name="VerifyClickingProjectNameRedirectsToHomepage"/>
+                    <include name="VerifyDisplaySidebarContentOnHomepage"/>
+                    <include name="VerifyDisplaySearchSectionOnHomepage"/>
+                </methods>
+            </class>
+
+            <class name="e2e_tests.testcases_logic.BooksTestCases">
+                <methods>
+                    <include name="verifyClickingHeaderBookTabRedirectToBookPage"/>
+                    <include name="verifyClickingSidebarBookTabRedirectToBookPage"/>
+                    <include name="verifyDisplayBookList"/>
+                    <include name="verifyClickingCreateButtonRedirectToCreatePage"/>
+                    <include name="verifyCreateNewBookCorrectly"/>
+                    <include name="verifyLengthOfTitleMoreThanEightCharacters"/>
+                    <include name="VerifyClickClearButtonResetAllFields"/>
+                    <include name="VerifyTitleFieldIsMandatory"/>
+                    <include name="VerifyYearFieldIsOptional"/>
+                    <include name="VerifyClickEditButtonRedirectToEditPage"/>
+                    <include name="VerifyTheEditingIsReflectedCorrectly"/>
+                    <include name="VerifyRemoveBookProperly"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
